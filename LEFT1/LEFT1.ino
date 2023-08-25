@@ -134,7 +134,7 @@ uint8_t* item = (uint8_t*)xRingbufferReceive(RingBuf, &t, portMAX_DELAY);
   vRingbufferReturnItem(RingBuf, (void *)item);
 
   sendNow(slave.peer_addr,R, t/2);
-  vTaskDelay(2/portTICK_PERIOD_MS);  // difficulty with this delay.... (< 10ms)
+//  vTaskDelay(2/portTICK_PERIOD_MS);  // difficulty with this delay.... (< 10ms)
   i2s_write(I2SR, L, t/2, &t, portMAX_DELAY );
 }
 }
