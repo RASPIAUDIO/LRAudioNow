@@ -134,7 +134,7 @@ uint8_t* item = (uint8_t*)xRingbufferReceive(RingBuf, &t, portMAX_DELAY);
   vRingbufferReturnItem(RingBuf, (void *)item);
 
   sendNow(slave.peer_addr,R, t/2);
-//  vTaskDelay(2/portTICK_PERIOD_MS);  // difficulty with this delay.... (< 10ms)
+  vTaskDelay(2/portTICK_PERIOD_MS);  // difficulty with this delay.... (< 10ms)
   i2s_write(I2SR, L, t/2, &t, portMAX_DELAY );
 }
 }
@@ -275,7 +275,7 @@ void setup()
     ESP_ERROR_CHECK( esp_wifi_set_storage(WIFI_STORAGE_RAM) );
     ESP_ERROR_CHECK( esp_wifi_set_mode(WIFI_MODE_STA) );
     ESP_ERROR_CHECK( esp_wifi_start());
-    ESP_ERROR_CHECK( esp_wifi_config_espnow_rate(WIFI_IF_STA, WIFI_PHY_RATE_54M));    
+    ESP_ERROR_CHECK( esp_wifi_config_espnow_rate(WIFI_IF_STA, WIFI_PHY_RATE_18M));    
 
 ////////////////////////////////////////////////
 //Finding out the peer (Slave with SSID == "Slave...")
