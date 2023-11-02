@@ -8,7 +8,7 @@ This repository contains instructions and resources for setting up a True Wirele
 
 ## How it works
 
-1. Connect to the left ESP32 module using a standard Bluetooth connection.
+1. Connects to the left ESP32 module using a standard Bluetooth connection.
 2. Configure the left ESP32 to transmit the right channel data to the right ESP32 using the ESP-NOW protocol. ESP-NOW is preferred for its very low latency.
 3. After a predetermined duration, synchronize the left and right ESP32 modules to play their respective audio samples simultaneously.
 4. Continue the process of transmitting data and playing audio samples synchronously until the next sample.
