@@ -6,7 +6,7 @@ This repository contains instructions and resources for setting up a True Wirele
 
 - 2 ESP32 Modules Proto board ([Muse Proto](https://raspiaudio.com/produit/muse-proto))
 
-## Instructions
+## How it works
 
 1. Connect to the left ESP32 module using a standard Bluetooth connection.
 2. Configure the left ESP32 to transmit the right channel data to the right ESP32 using the ESP-NOW protocol. ESP-NOW is preferred for its very low latency.
